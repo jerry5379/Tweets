@@ -1,0 +1,5 @@
+tweepy
+urllib3
+pyshorteners
+Counter
+operator
