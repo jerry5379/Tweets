@@ -1,16 +1,20 @@
 
 # import the time module 
 import time 
-import re
-from stemming.porter2 import stem as PT
 
-from time import sleep
-from tqdm import tqdm
 
-count=0
-for i in tqdm(range(60)):
-    sleep(1)
-    count =1+ count
+def time_convert(sec):
+    mins = sec // 60
+    sec = sec % 60
+    hours = mins // 60
+    mins = mins % 60
+    print("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),sec))
+input("Press Enter to start")
+start_time = time.time()
+input("Press Enter to stop")
+end_time = time.time()
+time_lapsed = end_time - start_time
+time_convert(time_lapsed)
 
 # with  open('stopwords.txt','r') as st:
 # f_content = "Based on the fact you are facing performance issues. I would suggest using the subprocess library (for Python2, or for Python3) to call the sed linux command."
