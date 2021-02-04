@@ -15,13 +15,13 @@
 
 from timeit import default_timer as timer
 
-# start =timer()
-freq=5
+start =timer()
+freq=10
 last_time =0.0
 while True:
     ctime=timer()
     print(ctime)
-    if ctime-last_time >freq:
+    if ctime-last_time >= freq:
         print("value")
         last_time=ctime
         break
